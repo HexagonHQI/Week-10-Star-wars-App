@@ -2,7 +2,7 @@ console.log('ver 2.3 ajax');
 // init ajax
 let xhr = new XMLHttpRequest();
 
-//Select elements in DOM
+//Select elements in DOM with parameters
 let button = document.querySelector('#button');
 let names = document.querySelector('#name');
 let height = document.querySelector('#height');
@@ -10,7 +10,7 @@ let gender = document.querySelector('#gender');
 let birthYear = document.querySelector('#birth-year');
 let homeWorld = document.querySelector('#home-world');
 
-//Get the info from API and catch for Errors
+
 function getInfo (){
   //Call Loading Data
  	updateWithLoading();
@@ -87,7 +87,7 @@ function updateInfoWithError(){
   homeWorld.innerText = ''
 }
 
-//Display when updating info (pending data)
+
 function updateWithLoading(){
   //Icon link: https://fontawesome.com/how-to-use/on-the-web/styling/animating-icons
   names.innerHTML = '<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i> <p>Loading...</p>';
@@ -101,6 +101,4 @@ button.addEventListener('click', getInfo);
 
 
 
-//https://mathiasbynens.be/notes/xhr-responsetype-json
-// Ref: https://www.w3schools.com/js/js_json_http.asp
-// Ref: https://www.freecodecamp.org/forum/t/get-json-with-the-javascript-xmlhttprequest-method/197547
+
